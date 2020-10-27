@@ -1,12 +1,10 @@
 //1  Write a function splitAndMerge
 function splitAndMerge(stringToSplit, separator) {
     var arrayOfStrings = stringToSplit.split(' ');
-    var resultArray = [];
     for (var i = 0; i < arrayOfStrings.length; i++) {
-        var string = arrayOfStrings[i].split('').join(separator);
-        resultArray.push(string);
+        arrayOfStrings[i]=arrayOfStrings[i].split('').join(separator);
     }
-    return resultArray.join(' ');
+    return arrayOfStrings.join(' ');
 }
 console.log(splitAndMerge("Hello World!", ','));
 
